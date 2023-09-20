@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html{
+    background-color: #333333;
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+
+header {
+    background-color: gray;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+}
+
+main>section {
+    width: 70%;
+    margin-top: 5rem;
+}
+
+.inputs-btn {
+    display: flex;
+    justify-content: space-between;
+    background-color: #444444;
+    align-items: center;
+}
+
+.inputs {
+    gap: 1.7rem;
+    display: flex;
+    padding: 1.2rem;
+    justify-content: space-between;
+}
+.inputs > div {
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 15px;
+    margin-bottom: 3px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input{
+    padding: .4rem;
+    width: 15rem;
+    border: 1px solid #FF9900;
+    border-radius: .4rem;
+}
+
+.btn-add{
+    padding: 1rem;
+}
+
+#add-task{
+    color: white;
+    background-color: #FF9900;
+    padding: .7rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+input:focus{
+    outline:none !important ;
+    border: 2px solid #FF9900;
+}
+
+
+
+/* CARD */
+
+.tareas{
+    margin-top: 1rem;
+    background-color: #444444;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.tareas::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.tareas::-webkit-scrollbar-thumb {
+    background-color: #333; /* Color de la barra de desplazamiento */
+}
+
+.tareas::-webkit-scrollbar-track {
+    background-color: #999; /* Color de fondo del track */
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.title-task{
+    font-size: 2rem;
+    color: #FF9900;
+}
+
+.p-task{
+    color: #C2CCC9;
+}
+
+#button-delete{
+    color: #e62c1e;
+    border-radius: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #e62c1e;
+    padding: .4rem;
+}
+
+@media screen and (max-width: 929px) {
+    .inputs-btn{
+        display: flex;
+        flex-direction: column;
+    }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+    }
+    .tareas{
+        margin-top: 1rem;
+        background-color: #444444;
+        max-height: 250px;
+        overflow-y: auto;
+    }
+    #miInputDesc, #miInput{
+        width: 25rem;
+        transition: 1s;
+    }
+}
+
+@media screen and (max-width: 602px) {
+    #miInputDesc, #miInput{
+        transition: 1s;
+        width: 14rem;
+    }
+}
